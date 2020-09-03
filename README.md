@@ -1,5 +1,5 @@
 # Decomposer
-无论是 MVC、MVP 还是 MVVM 等构架模式，都是做为提纲挈领的指导思想而存在，并没有一个非常具体的操作规范，于是，我自己编写了一个……
+无论是 MVC、MVP 还是 MVVM 等构架模式，都是做为提纲挈领的指导思想而存在，并没有一个非常具体的操作规范，现在，我创建了一个带操作规范的构架模式🥳
 
 
 
@@ -114,7 +114,7 @@ struct SomeModel: ModelType {
 }
 
 extension Something {
-    // 若是 UITableView
+    // 若是 table view 页面
     
     static var tCells: [UITableViewCell.Type]? {
         // 所有以纯代码形式创建的 cell 类型
@@ -131,7 +131,7 @@ extension Something {
         [ACell.self, BCell.self, CCell.self, DCell.self]
     }
     
-    // 若是 UICollectionView
+    // 若是 collection view 页面
     
     static var cCells: [UICollectionViewCell.Type]? {
         // 所有以纯代码形式创建的 cell 类型
