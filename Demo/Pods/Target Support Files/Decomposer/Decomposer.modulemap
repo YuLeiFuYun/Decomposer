@@ -1,0 +1,6 @@
+framework module Decomposer {
+  umbrella header "Decomposer-umbrella.h"
+
+  export *
+  module * { export * }
+}

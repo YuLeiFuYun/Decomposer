@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-Decomposer-Demo/Pods-Decomposer-Demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Decomposer/Decomposer.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/YLExtensions/YLExtensions.framework
+${BUILT_PRODUCTS_DIR}/YLPullToRefreshKit/YLPullToRefreshKit.framework
+${BUILT_PRODUCTS_DIR}/YLRefreshKit/YLRefreshKit.framework
+${BUILT_PRODUCTS_DIR}/YLStateMachine/YLStateMachine.framework

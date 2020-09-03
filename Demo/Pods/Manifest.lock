@@ -1,0 +1,36 @@
+PODS:
+  - Decomposer (0.1.0):
+    - YLRefreshKit
+  - SnapKit (5.0.1)
+  - YLExtensions (1.2.1)
+  - YLPullToRefreshKit (1.0.0)
+  - YLRefreshKit (2.1.5):
+    - YLExtensions
+    - YLPullToRefreshKit
+    - YLStateMachine
+  - YLStateMachine (1.1.2)
+
+DEPENDENCIES:
+  - Decomposer
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Decomposer
+    - SnapKit
+    - YLExtensions
+    - YLPullToRefreshKit
+    - YLRefreshKit
+    - YLStateMachine
+
+SPEC CHECKSUMS:
+  Decomposer: 0d473b2a9ddbab6c12858cd92825d350ff63c7a2
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  YLExtensions: a182a96d9685aae302023cf565c56f65991fc8fb
+  YLPullToRefreshKit: ace06a77856f45b803697c33c1400953d9ed93f8
+  YLRefreshKit: dafb860208377069113514519fdc52c9b1aa9a94
+  YLStateMachine: f93c6d7789d2732f7c7ffed0ff2a298a5f8ab250
+
+PODFILE CHECKSUM: d9674c7f01678059781d9c81ccdfbd2845f418a5
+
+COCOAPODS: 1.9.3

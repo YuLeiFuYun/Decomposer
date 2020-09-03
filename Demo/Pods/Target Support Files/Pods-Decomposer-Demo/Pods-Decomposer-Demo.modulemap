@@ -1,0 +1,6 @@
+framework module Pods_Decomposer_Demo {
+  umbrella header "Pods-Decomposer-Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
