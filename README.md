@@ -27,7 +27,7 @@
 
 - #### Model
 
-由 `ModelType` 协议规范。它有一个可选的 `nextPage` 属性，加载下一页数据时会用的到；一个 `data` 属性，用以存储网络请求得来的被转化成模型的数据；它还有一些可选的类型属性，存储 `cell` 的类型，用以自动化注册及创建 `cell` 。
+由 `ModelType` 协议规范。它有一个可选的 `nextPage` 属性，加载下一页数据时会用的到；一个只读的 `data` 属性，返回网络请求得来的被转化成模型的数据；一个只读的 `pageablePropertyPath` 属性，返回可分页属性的 `keyPath` ；它还有一些可选的类型属性，存储 `cell` 的类型，用以自动化注册及创建 `cell` 。
 
 - #### Target
 
@@ -102,14 +102,12 @@ struct SomeModel: ModelType {
     
     // 可选属性
     var nextPage: Int?
+    var pageablePropertyPath: WritableKeyPath<SomeModel, [Something]>? {
+        return \SomeModel.something
+    }
     // 必要属性
-    var data: [[Any]]?
-    
-    // 创建一个初始化方法初始化 data
-    init(something: [Something], nextPage: Int? = nil) {
-        self.something = something
-        self.nextPage = nextPage
-        self.data = [something]
+    var data: [[Any]] {
+        return [something]
     }
 }
 
