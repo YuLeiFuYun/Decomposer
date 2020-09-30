@@ -75,16 +75,16 @@ open class ViewModel<Model: ModelType>:
     // MARK: - UICollectionViewDataSource
     
     open func numberOfSections(in collectionView: UICollectionView) -> Int {
-        model == nil ? 0 : model!.data!.count
+        model == nil ? 0 : model!.data.count
     }
     
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        model == nil ? 0 : model!.data![section].count
+        model == nil ? 0 : model!.data[section].count
     }
     
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, with: Model.cAll!)
-        cell.configure(model!.data![indexPath.section][indexPath.row])
+        cell.configure(model!.data[indexPath.section][indexPath.row])
         
         return cell
     }
