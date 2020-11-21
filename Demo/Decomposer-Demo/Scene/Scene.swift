@@ -34,7 +34,7 @@ enum Scene: SceneType {
             thirdVC.bindRefreshStateMachine { [weak thirdVC] in
                 guard
                     let viewController = thirdVC,
-                    let ciDetail = viewController.refreshStateMachine.operator.dataSource.model?.data![0][0] as? CiDetail
+                    let ciDetail = viewController.refreshStateMachine.operator.dataSource.model?.data[0][0] as? CiDetail
                 else { return }
                 
                 viewController.titleLabel.text = ciDetail.title

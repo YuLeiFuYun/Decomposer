@@ -25,7 +25,9 @@ struct NetworkManager<Model: ModelType>: NetworkManagerType {
             let data = try! Data(contentsOf: jsonURL)
             let ciSummaries = try! JSONDecoder().decode([CiSummary].self, from: data)
             let nextPage = (ciSummaries.count - 20 * page) <= 0 ? nil : page + 1
-            let model = SecondModel(ciList: ciSummaries, nextPage: nextPage)
+            let start = 20 * (page - 1)
+            let end = (nextPage == nil) ? ciSummaries.count : 20 * page
+            let model = SecondModel(ciSummaries: Array(ciSummaries[start..<end]), nextPage: nextPage)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 completion(.success(model as! Model))
@@ -34,7 +36,7 @@ struct NetworkManager<Model: ModelType>: NetworkManagerType {
             let jsonURL = Bundle.main.url(forResource: jsonFileNames[chapterNumber], withExtension: "json")!
             let data = try! Data(contentsOf: jsonURL)
             let ciDetails = try! JSONDecoder().decode([CiDetail].self, from: data)
-            let model = ThirdModel(ci: ciDetails[ciNumber])
+            let model = ThirdModel(ci: [ciDetails[ciNumber]])
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 completion(.success(model as! Model))

@@ -12,15 +12,18 @@ struct CiSummary: Decodable {
     let author: String
 }
 
-struct SecondModel: ModelType {
-    let ciSummaries: [CiSummary]
+struct SecondModel {
+    var ciSummaries: [CiSummary]
     var nextPage: Int?
-    var data: [[Any]]?
+}
+
+extension SecondModel: ModelType {
+    var pageablePropertyPath: WritableKeyPath<SecondModel, [CiSummary]>? {
+        return \SecondModel.ciSummaries
+    }
     
-    init(ciList: [CiSummary], nextPage: Int?) {
-        self.ciSummaries = ciList
-        self.nextPage = nextPage
-        self.data = [ciList]
+    var data: [[Any]] {
+        return [ciSummaries]
     }
 }
 

@@ -14,12 +14,16 @@ struct CiDetail: Decodable {
     let notes: [String]
 }
 
-struct ThirdModel: ModelType {
-    let ci: CiDetail
-    var data: [[Any]]?
+struct ThirdModel {
+    var ci: [CiDetail]
+}
+
+extension ThirdModel: ModelType {
+    var pageablePropertyPath: WritableKeyPath<ThirdModel, [CiDetail]>? {
+        return \ThirdModel.ci
+    }
     
-    init(ci: CiDetail) {
-        self.ci = ci
-        self.data = [[ci]]
+    var data: [[Any]] {
+        return [ci]
     }
 }

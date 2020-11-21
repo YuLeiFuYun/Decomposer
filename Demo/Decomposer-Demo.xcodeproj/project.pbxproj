@@ -230,7 +230,6 @@
 				4E39468D2500B1B000C1859C /* Sources */,
 				4E39468E2500B1B000C1859C /* Frameworks */,
 				4E39468F2500B1B000C1859C /* Resources */,
-				BBD561FDEBA178ED7DECD422 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,23 +296,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BBD561FDEBA178ED7DECD422 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Decomposer-Demo/Pods-Decomposer-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Decomposer-Demo/Pods-Decomposer-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Decomposer-Demo/Pods-Decomposer-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FF44B7245CAECEF3364C53EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

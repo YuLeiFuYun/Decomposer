@@ -11,13 +11,17 @@ struct Chapter {
     let name: String
 }
 
-struct FirstModel: ModelType {
-    let chapters: [Chapter]
-    var data: [[Any]]?
+struct FirstModel {
+    var chapters: [Chapter]
+}
+
+extension FirstModel: ModelType {
+    var pageablePropertyPath: WritableKeyPath<FirstModel, [Chapter]>? {
+        return \FirstModel.chapters
+    }
     
-    init(chapters: [Chapter]) {
-        self.chapters = chapters
-        self.data = [chapters]
+    var data: [[Any]] {
+        return [chapters]
     }
 }
 
